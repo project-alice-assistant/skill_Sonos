@@ -2,6 +2,74 @@
     "skill": "Sonos",
     "icon": "time",
     "description": "Let alice control your sonos hardware",
-    "slotTypes": [],
-    "intents": []
+    "slotTypes": [
+        {
+            "name": "PlayStopPause",
+            "matchingStrictness": null,
+            "automaticallyExtensible": false,
+            "useSynonyms": true,
+            "values": [
+                {
+                    "value": "play",
+                    "synonyms": [
+                        "on",
+                        "start"
+                    ]
+                },
+                {
+                    "value": "stop",
+                    "synonyms": [
+                        "off"
+                    ]
+                },
+                {
+                    "value": "pause",
+                    "synonyms": []
+                }
+            ]
+        }
+    ],
+    "intents": [
+        {
+        	"name": "PlayStopPauseSonos",
+        	"description": "The user want to start, stop or pause the music",
+        	"enabledByDefault": true,
+        	"utterances": [
+        		"music please",
+        		"please, music in the {office:=>Room}",
+        		"let's {play:=>Action} some music",
+        		"can you please {stop:=>Action} the music",
+        		"{play:=>Action} some music",
+        		"{play:=>Action} some music please",
+        		"please {play:=>Action} some music",
+        		"please {stop:=>Action} the music",
+        		"turn {on:=>Action} the music",
+        		"please turn {on:=>Action} the music",
+                "let's {play:=>Action} some music in the {office:=>Room}",
+        		"can you please {stop:=>Action} the music in {bathroom:=>Room}",
+        		"{play:=>Action} some music {everywhere:=>Room}",
+        		"{play:=>Action} some music in the {kitchen:=>Room} please",
+        		"please {play:=>Action} some music in the {office:=>Room}",
+        		"please {stop:=>Action} the music in {bedroom:=>Room}",
+        		"turn {on:=>Action} the music in the {living room:=>Room}",
+        		"please turn {on:=>Action} the music in the {office:=>Room}"
+            ],
+        	"slots": [
+        		{
+        			"name": "Action",
+        			"description": null,
+        			"required": false,
+        			"type": "PlayStopPause",
+        			"missingQuestion": ""
+        		},
+                {
+                    "name": "Room",
+                    "description": null,
+                    "required": false,
+                    "type": "Alice/Room",
+                    "missingQuestion": ""
+                }
+        	]
+        }
+    ]
 }

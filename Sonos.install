@@ -1,8 +1,8 @@
 {
     "name": "Sonos",
     "version": "0.0.1",
-    "icon": "fab fa-battle-net",
-    "category": "undefined",
+    "icon": "fas fa-music",
+    "category": "music",
     "author": "Psychokiller1888",
     "maintainers": [],
     "desc": "Let alice control your sonos hardware",

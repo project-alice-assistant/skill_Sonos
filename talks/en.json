@@ -1,1 +1,12 @@
-{}
+{
+	"noPlayerInRoom": [
+		"Sorry, no player in room {}.",
+		"No, I can't, there's no Sonos device in room {}.",
+		"I'm so sorry but I can't, there's no Sonos in room {}."
+	],
+	"ok": [
+		"Ok, done!",
+		"Sure, just did.",
+		"Of course!"
+	]
+}
