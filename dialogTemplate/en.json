@@ -1,0 +1,7 @@
+{
+    "skill": "Sonos",
+    "icon": "time",
+    "description": "Let alice control your sonos hardware",
+    "slotTypes": [],
+    "intents": []
+}

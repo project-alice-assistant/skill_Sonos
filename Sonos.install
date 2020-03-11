@@ -1,0 +1,22 @@
+{
+    "name": "Sonos",
+    "version": "0.0.1",
+    "icon": "fab fa-battle-net",
+    "category": "undefined",
+    "author": "Psychokiller1888",
+    "maintainers": [],
+    "desc": "Let alice control your sonos hardware",
+    "aliceMinVersion": "1.0.0-a6",
+    "systemRequirements": [
+        ""
+    ],
+    "pipRequirements": [
+        "soco"
+    ],
+    "conditions": {
+        "lang": [
+            "en"
+        ],
+        "asrArbitraryCapture": true
+    }
+}
