@@ -45,6 +45,33 @@
 					"synonyms": []
 				}
 			]
+		},
+		{
+			"name": "VolumeDirection",
+			"matchingStrictness": null,
+			"automaticallyExtensible": false,
+			"useSynonyms": true,
+			"values": [
+				{
+					"value": "louder",
+					"synonyms": [
+						"increase",
+						"more",
+						"higher",
+						"up"
+					]
+				},
+				{
+					"value": "quieter",
+					"synonyms": [
+						"decrease",
+						"less loud",
+						"less",
+						"lower",
+						"down"
+					]
+				}
+			]
 		}
 	],
     "intents": [
@@ -125,6 +152,82 @@
 					"description": null,
 					"required": false,
 					"type": "NextOrPrevious",
+					"missingQuestion": ""
+				},
+				{
+					"name": "Room",
+					"description": null,
+					"required": false,
+					"type": "Alice/Room",
+					"missingQuestion": ""
+				}
+			]
+		},
+		{
+			"name": "SetSonosVolume",
+			"description": "User wants to change the volume of a Sonos player",
+			"enabledByDefault": true,
+			"utterances": [
+				"can you make the music {louder:=>VolumeDirection}",
+				"crank {up:=>VolumeDirection} the volume please",
+				"crank {up:=>VolumeDirection} the volume",
+				"turn {down:=>VolumeDirection} the volume please",
+				"turn {up:=>VolumeDirection} the volume",
+				"can you please make the music {louder:=>VolumeDirection}",
+				"make the music {louder:=>VolumeDirection}",
+				"make the music {louder:=>VolumeDirection} please",
+				"music {less loud:=>VolumeDirection} please",
+				"{less loud:=>VolumeDirection} please",
+				"{louder:=>VolumeDirection}",
+				"{increase:=>VolumeDirection} the volume",
+				"{increase:=>VolumeDirection} the volume please",
+				"please {increase:=>VolumeDirection} the volume",
+				"{more:=>VolumeDirection} volume please",
+				"{more:=>VolumeDirection} volume",
+				"set the volume {higher:=>VolumeDirection}",
+				"set the volume {lower:=>VolumeDirection} please",
+				"set the volume to {35:=>ExactVolume} please",
+				"change the volume to {42:=>ExactVolume} please",
+				"please change the volume to {11:=>ExactVolume}",
+				"please set the volume to {99:=>ExactVolume}",
+				"can you please set the volume to {12:=>ExactVolume}",
+				"can you make the music {louder:=>VolumeDirection} in the {office:=>Room}",
+				"crank {up:=>VolumeDirection} the volume in the {bedroom:=>Room} please",
+				"crank {up:=>VolumeDirection} the volume in the {living room:=>Room}",
+				"turn {down:=>VolumeDirection} the volume in the {office:=>Room} please",
+				"turn {up:=>VolumeDirection} the volume in the {office:=>Room}",
+				"can you please make the music {louder:=>VolumeDirection} in the {office:=>Room}",
+				"make the music {louder:=>VolumeDirection} in the {office:=>Room}",
+				"make the music {louder:=>VolumeDirection} in the {office:=>Room} please",
+				"music {less loud:=>VolumeDirection} in the {office:=>Room} please",
+				"{less loud:=>VolumeDirection} in the {office:=>Room} please",
+				"{louder:=>VolumeDirection} in the {office:=>Room}",
+				"{increase:=>VolumeDirection} the volume in the {office:=>Room}",
+				"{increase:=>VolumeDirection} the volume in the {office:=>Room} please",
+				"please {increase:=>VolumeDirection} the volume in the {office:=>Room}",
+				"{more:=>VolumeDirection} volume in the {office:=>Room} please",
+				"{more:=>VolumeDirection} volume in the {office:=>Room}",
+				"set the volume {higher:=>VolumeDirection} in the {office:=>Room}",
+				"set the volume {lower:=>VolumeDirection} in the {office:=>Room} please",
+				"set the volume to {35:=>ExactVolume} in the {office:=>Room} please",
+				"change the volume to {42:=>ExactVolume} in the {office:=>Room} please",
+				"please change the volume to {11:=>ExactVolume} in the {office:=>Room}",
+				"please set the volume to {99:=>ExactVolume} in the {office:=>Room}",
+				"can you please set the volume to {12:=>ExactVolume} in the {office:=>Room}"
+			],
+			"slots": [
+				{
+					"name": "VolumeDirection",
+					"description": null,
+					"required": false,
+					"type": "VolumeDirection",
+					"missingQuestion": ""
+				},
+				{
+					"name": "ExactVolume",
+					"description": null,
+					"required": false,
+					"type": "snips/number",
 					"missingQuestion": ""
 				},
 				{

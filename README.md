@@ -6,20 +6,15 @@
 ### Description
 Let alice control your sonos hardware
 
-- Version: 0.0.1
+- Version: 1.0.0
 - Author: Psychokiller1888
 - Maintainers: 
 - Alice minimum Version: 1.0.0-a6
 - Conditions:
    - Arbitrary capture
-
-
 - Requirements:
    - PIP: ['soco']
-
    - System: ['']
-
-
 - Widgets:
     SonosNowPlaying
 
