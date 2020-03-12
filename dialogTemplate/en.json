@@ -17,18 +17,36 @@
                     ]
                 },
                 {
-                    "value": "stop",
-                    "synonyms": [
-                        "off"
-                    ]
-                },
-                {
-                    "value": "pause",
-                    "synonyms": []
-                }
-            ]
-        }
-    ],
+					"value": "stop",
+					"synonyms": [
+						"off"
+					]
+				},
+				{
+					"value": "pause",
+					"synonyms": []
+				}
+			]
+		},
+		{
+			"name": "NextOrPrevious",
+			"matchingStrictness": null,
+			"automaticallyExtensible": false,
+			"useSynonyms": true,
+			"values": [
+				{
+					"value": "next",
+					"synonyms": [
+						"skip"
+					]
+				},
+				{
+					"value": "previous",
+					"synonyms": []
+				}
+			]
+		}
+	],
     "intents": [
         {
         	"name": "PlayStopPauseSonos",
@@ -60,16 +78,63 @@
         			"description": null,
         			"required": false,
         			"type": "PlayStopPause",
-        			"missingQuestion": ""
-        		},
-                {
-                    "name": "Room",
-                    "description": null,
-                    "required": false,
-                    "type": "Alice/Room",
-                    "missingQuestion": ""
-                }
-        	]
-        }
-    ]
+					"missingQuestion": ""
+				},
+				{
+					"name": "Room",
+					"description": null,
+					"required": false,
+					"type": "Alice/Room",
+					"missingQuestion": ""
+				}
+			]
+		},
+		{
+			"name": "ChangeTrack",
+			"description": "User asks to change the track",
+			"enabledByDefault": true,
+			"utterances": [
+				"can you go to the {next:=>Direction} track",
+				"can you go to the {previous:=>Direction} track please",
+				"please go to the {next:=>Direction} track",
+				"please go to the {previous:=>Direction} song",
+				"change to the {next:=>Direction} song",
+				"please change to the {next:=>Direction} track",
+				"play the {next:=>Direction} track please",
+				"please play the {next:=>Direction} song",
+				"please {skip:=>Direction} this song",
+				"please {skip:=>Direction} this track",
+				"{skip:=>Direction} this track please",
+				"{skip:=>Direction} this track",
+				"{previous:=>Direction} song please",
+				"{previous:=>Direction} track please",
+				"can you go to the {next:=>Direction} track in the {kitchen:=>Room}",
+				"can you go to the {previous:=>Direction} track in the {bedroom:=>Room} please",
+				"please go to the {next:=>Direction} track in {living room:=>Room}",
+				"please go to the {previous:=>Direction} song in the {attic:=>Room}",
+				"change to the {next:=>Direction} song in the {garden:=>Room}",
+				"please change to the {next:=>Direction} track in the {office:=>Room}",
+				"play the {next:=>Direction} track in the {bedroom:=>Room} please",
+				"please play the {next:=>Direction} song in the {kitchen:=>Room}",
+				"{previous:=>Direction} song in the {kitchen:=>Room} please",
+				"{previous:=>Direction} track in the {kitchen:=>Room} please"
+			],
+			"slots": [
+				{
+					"name": "Direction",
+					"description": null,
+					"required": false,
+					"type": "NextOrPrevious",
+					"missingQuestion": ""
+				},
+				{
+					"name": "Room",
+					"description": null,
+					"required": false,
+					"type": "Alice/Room",
+					"missingQuestion": ""
+				}
+			]
+		}
+	]
 }

@@ -1,4 +1,4 @@
-from typing import Dict
+from typing import Dict, Optional
 
 import soco
 from soco import SoCo
@@ -33,21 +33,21 @@ class Sonos(AliceSkill):
 
 	@IntentHandler('PlayStopPauseSonos')
 	def playStopPause(self, session: DialogSession, **_kwargs):
-		action = session.slots['Action'] if 'Action' in session.slots else 'play'
-		room = session.slots['Room'].lower() if 'Room' in session.slots else session.siteId
-
-		if room not in self._sonosPlayers and room != constants.EVERYWHERE:
-			self.endDialog(
+		if 'Action' not in session.slots:
+			self.continueDialog(
 				sessionId=session.sessionId,
-				text=self.randomTalk(text='noPlayerInRoom', replace=[room])
+				text=self.TalkManager.randomTalk('notUnderstood', skill='system')
 			)
 			return
 
-		if room == constants.EVERYWHERE:
-			for room in self._sonosPlayers:
-				self.action(room, action)
-		else:
-			self.action(room, action)
+		action = session.slotValue('Action') if 'Action' in session.slots else 'play'
+		players = self.filterPlayers(session)
+
+		if not players:
+			return
+
+		for player in players:
+			self.action(player, action)
 
 		self.endDialog(
 			sessionId=session.sessionId,
@@ -55,10 +55,53 @@ class Sonos(AliceSkill):
 		)
 
 
-	def action(self, room: str, action: str):
+	@IntentHandler('ChangeTrack')
+	def changeTrack(self, session: DialogSession, **_kwargs):
+		if 'Direction' not in session.slots:
+			self.continueDialog(
+				sessionId=session.sessionId,
+				text=self.TalkManager.randomTalk('notUnderstood', skill='system')
+			)
+			return
+
+		players = self.filterPlayers(session)
+		if not players:
+			return
+
+		for player in players:
+			self.action(player, session.slotValue('Direction'))
+
+		self.endDialog(
+			sessionId=session.sessionId,
+			text=self.randomTalk(text='ok')
+		)
+
+
+	def filterPlayers(self, session: DialogSession) -> Optional[list]:
+		room = session.slots['Room'].lower() if 'Room' in session.slots else session.siteId
+
+		if room == constants.EVERYWHERE:
+			return [player for player in self._sonosPlayers.values()]
+
+		if room not in self._sonosPlayers:
+			self.endDialog(
+				sessionId=session.sessionId,
+				text=self.randomTalk(text='noPlayerInRoom', replace=[room])
+			)
+			return None
+
+		return [self._sonosPlayers[room]]
+
+
+	@staticmethod
+	def action(player: SoCo, action: str):
 		if action == 'play':
-			self._sonosPlayers[room].play()
+			player.play()
 		elif action == 'stop':
-			self._sonosPlayers[room].stop()
-		else:
-			self._sonosPlayers[room].pause()
+			player.stop()
+		elif action == 'pause':
+			player.pause()
+		elif action == 'next':
+			player.next()
+		elif action == 'previous':
+			player.previous()
