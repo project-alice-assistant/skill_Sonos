@@ -31,6 +31,29 @@ class Sonos(AliceSkill):
 			raise SkillStartingFailed
 
 
+	def onGoingBed(self):
+		for player in self._sonosPlayers.values():
+			if self.isPlaying(player):
+				player.pause()
+
+
+	def onSleep(self):
+		self.onGoingBed()
+		for player in self._sonosPlayers.values():
+			player.status_light = False
+
+
+	def onWakeup(self):
+		for player in self._sonosPlayers.values():
+			player.status_light = True
+
+
+	@staticmethod
+	def isPlaying(player: SoCo) -> bool:
+		return player.get_current_transport_info()['current_transport_state'] == 'PLAYING' or \
+			   player.get_current_transport_info()['current_transport_state'] == 'TRANSITIONING'
+
+
 	@IntentHandler('PlayStopPauseSonos')
 	def playStopPause(self, session: DialogSession, **_kwargs):
 		if 'Action' not in session.slots:
