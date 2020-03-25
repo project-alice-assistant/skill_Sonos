@@ -1,0 +1,296 @@
+{
+    "skill": "Sonos",
+    "icon": "time",
+    "description": "Let alice control your sonos hardware",
+    "slotTypes": [
+        {
+		"name": "PlayStopPause",
+		"matchingStrictness": null,
+		"automaticallyExtensible": false,
+		"useSynonyms": true,
+		"values": [
+                {
+			"value": "play",
+			"synonyms": [
+				"ein",
+				"starte",
+				"spiele",
+				"spielen",
+				"abspielen"
+                    ]
+                },
+                {
+			"value": "stop",
+			"synonyms": [
+				"aus",
+				"stop",
+				"stoppe",
+				"stoppen"
+			]
+		},
+		{
+			"value": "pause",
+			"synonyms": [
+				"pausieren",
+				"anhalte",
+				"halte"
+			]
+		}
+			]
+		},
+		{
+		"name": "NextOrPrevious",
+		"matchingStrictness": null,
+		"automaticallyExtensible": false,
+		"useSynonyms": true,
+		"values": [
+		{
+			"value": "next",
+			"synonyms": [
+				"überspringe",
+				"nächster",
+				"nächstes"
+			]
+		},
+		{
+			"value": "previous",
+			"synonyms": [
+				"vorheriger",
+				"letzter",
+				"letztes"
+			]
+		}
+			]
+		},
+		{
+		"name": "VolumeDirection",
+		"matchingStrictness": null,
+		"automaticallyExtensible": false,
+		"useSynonyms": true,
+		"values": [
+		{
+			"value": "louder",
+			"synonyms": [
+				"erhöhe",
+				"mehr",
+				"höher"
+			]
+		},
+		{
+			"value": "quieter",
+			"synonyms": [
+				"verringere",
+				"leise",
+				"leiser",
+				"weniger"
+			]
+		}
+			]
+		}
+	],
+    "intents": [
+        {
+        	"name": "PlayStopPauseSonos",
+        	"description": "Der Benutzer möchte die Musik starten, stoppen oder pausieren",
+        	"enabledByDefault": true,
+        	"utterances": [
+        		"Musik bitte im {office:=>Room}",
+			"Musik bitte in der {kitchen:=>Room}",
+        		"Bitte Musik im {office:=>Room}",
+			"Bitte Musik in der {kitchen:=>Room}",
+        		"Kannst Du bitte die Musik {stop:=>Action}",
+        		"{play:=>Action} ein bisschen Musik",
+        		"{play:=>Action} ein bisschen Musik, bitte",
+        		"Bitte {play:=>Action} Musik",
+        		"Bitte {stop:=>Action} die Musik",
+        		"Schalte die Musik {on:=>Action}",
+        		"Bitte schalte die Musik {on:=>Action}",
+			"Lass uns ein bisschen Musik im {office:=>Room} {play:=>Action}",
+			"Lass uns ein bisschen Musik in der {kitchen:=>Room} {abplay:=>Action}",
+        		"Kannst Du bitte die Musik im {Badezimmer:=>Room} {stoppen:=>Action}",
+			"Kannst Du bitte die Musik in der {kitchen:=>Room} {stoppen:=>Action}",
+        		"{play:=>Action} die Musik {Überall:=>Room}",
+			"{play:=>Action} etwas Musik im {office:=>Room}",
+			"{play:=>Action} etwas Musik im {office:=>Room} ab",
+			"{play:=>Action} die Musik in der {kitchen:=>Room}",
+        		"{play:=>Action} ein bisschen Musik im {office:=>Room} bitte",
+			"{play:=>Action} ein bisschen Musik in der {kitchen:=>Room} bitte",
+			"Bitte {play:=>Action} etwas Musik im {office:=>Room}",
+        		"Bitte {play:=>Action} etwas Musik in der {kitchen:=>Room}",
+			"Bitte {stoppe:=>Action} die Musik im {Schlafzimmer:=>Room}",
+        		"Bitte {stoppe:=>Action} die Musik in der {kitchen:=>Room}",
+        		"Schalte die Musik im {Wohnzimmer:=>Room} {play:=>Action}",
+			"Schalte die Musik in der {Wohnzimmer:=>Room} {play:=>Action}",
+			"Bitte schalte die Musik im {office:=>Room} {play:=>Action}",
+        		"Bitte schalte die Musik in der {kitchen:=>Room} {play:=>Action}"
+			"{stop:=>Action} schalte die Musik im {office:=>Room}",
+        		"{stop:=>Action} schalte die Musik in der {kitchen:=>Room}"
+            ],
+        	"slots": [
+        		{
+        			"name": "Action",
+        			"description": null,
+        			"required": false,
+        			"type": "PlayStopPause",
+					"missingQuestion": ""
+			},
+			{
+				"name": "Room",
+				"description": null,
+				"required": false,
+				"type": "Alice/Room",
+				"missingQuestion": ""
+			}
+			]
+		},
+		{
+		"name": "ChangeTrack",
+		"description": "Benutzer möchte den aktuellen Titel ändern",
+		"enabledByDefault": true,
+		"utterances": [
+			"Kannst du bitte das {next:=>Direction} Lied abspielen",
+			"Kannst du bitte das {previous:=>Direction} Lied abspielen bitte",
+			"Bitte spiele das {next:=>Direction} Lied ab",
+			"Bitte spiele den {previous:=>Direction} Song",
+			"{next:=>Direction} Titel, bitte",
+			"Bitte wechsel zum {next:=>Direction} Lied",
+			"Spiele den {next:=>Direction} Song ab, bitte",
+			"Bitte spiele den {next:=>Direction} Song",
+			"Bitte {skip:=>Direction} diesen Song",
+			"Bitte {skip:=>Direction} dieses Lied",
+			"{skip:=>Direction} bitte dieses Lied ",
+			"{skip:=>Direction} dieses Lied",
+			"{skip:=>Direction} dieses Lied, bitte",
+			"{previous:=>Direction} Song, bitte",
+			"{previous:=>Direction} Lied, bitte",
+			"Kannst Du bitte das {next:=>Direction} Lied in der {kitchen:=>Room} abspielen",
+			"Kannst Du das {previous:=>Direction} Lied im {bedroom:=>Room} abspielen, bitte",
+			"Bitte gehe über zum {next:=>Direction} Titel im {living room:=>Room}",
+			"Bitte gehe über zum {previous:=>Direction} Song in der {attic:=>Room}",
+			"Bitte gehe zum {next:=>Direction} Titel im {living room:=>Room} über",
+			"Bitte gehe zum {next:=>Direction} Titel in der {kitchen room:=>Room} über",
+			"Wechsel zum {next:=>Direction} Song im {garden:=>Room}",
+			"Wechsel zum {next:=>Direction} Song in der {kitchen:=>Room}",
+			"Bitte wechsel zum {next:=>Direction} Lied in der {office:=>Room}",
+			"Bitte wechsel im {office:=>Room} zum {next:=>Direction} Lied",
+			"Bitte wechsel in der {kitchen:=>Room} zum {next:=>Direction} Lied",
+			"Bitte wechsel im {office:=>Room} zum {next:=>Direction} Song",
+			"Bitte wechsel in der {kitchen:=>Room} zum {next:=>Direction} Song",
+			"Spiel den {next:=>Direction} Titel im {bedroom:=>Room} bitte",
+			"Spiel den {next:=>Direction} Titel in der {kitchen:=>Room} bitte",
+			"Bitte spiele den {next:=>Direction} Song in der {kitchen:=>Room}",
+			"{previous:=>Direction} Song in der{kitchen:=>Room} bitte",
+			"{previous:=>Direction} Lied im {kitchen:=>Room} bitte"
+		],
+		"slots": [
+			{
+				"name": "Direction",
+				"description": null,
+				"required": false,
+				"type": "NextOrPrevious",
+				"missingQuestion": ""
+			},
+			{
+				"name": "Room",
+				"description": null,
+				"required": false,
+				"type": "Alice/Room",
+				"missingQuestion": ""
+			}
+			]
+		},
+		{
+		"name": "SetSonosVolume",
+		"description": "Benutzer möchte die Lautsärke eines Sonos Gerätes ändern",
+		"enabledByDefault": true,
+		"utterances": [
+			"Kannst du die Musik {louder:=>VolumeDirection} machen",
+			"Mach die Lautstärke {up:=>VolumeDirection} bitte",
+			"Mach die Lautstärke {up:=>VolumeDirection}",
+			"Lautstärke {up:=>VolumeDirection}",
+			"Lautstärke {down:=>VolumeDirection} bitte",
+			"Kannst du bitte Musik {louder:=>VolumeDirection} machen",
+			"Mach die Musik {louder:=>VolumeDirection}",
+			"Mach die Musik {louder:=>VolumeDirection} bitte",
+			"Dreh die Musik {louder:=>VolumeDirection}",
+			"Dreh die Musik {lower:=>VolumeDirection} bitte",
+			"Musik {less loud:=>VolumeDirection} bitte",
+			"{less loud:=>VolumeDirection} bitte",
+			"{louder:=>VolumeDirection}",
+			"{increase:=>VolumeDirection} die Lautstärke",
+			"{increase:=>VolumeDirection} die Lautstärke, bitte",
+			"Bitte {increase:=>VolumeDirection} die Laustärke",
+			"{more:=>VolumeDirection} Laustärke bitte",
+			"{more:=>VolumeDirection} Laustärke",
+			"Setze die Lautstärke {higher:=>VolumeDirection}",
+			"Setze die Lautstärke {lower:=>VolumeDirection} bitte",
+			"Setze die Lautstärke auf {35:=>ExactVolume} bitte",
+			"Ändere die Lautstärke auf {42:=>ExactVolume} bitte",
+			"Bitte ändere die Lautstärke auf {11:=>ExactVolume}",
+			"Bitte setze die Lautstärke auf {99:=>ExactVolume}",
+			"Kannst du die Lautstärke bitte auf {12:=>ExactVolume} setzen",
+			"Kannst du die Musik in der {office:=>Room} {louder:=>VolumeDirection} machen",
+			"Kannst du bitte die Musik im {office:=>Room} {louder:=>VolumeDirection} machen",
+			"Dreh die Laustärke im {bedroom:=>Room} {up:=>VolumeDirection} bitte",
+			"Dreh die Laustärke in der {living room:=>Room} {up:=>VolumeDirection}",
+			"Die Musik {down:=>VolumeDirection} in der {office:=>Room} bitte",
+			"Die Musik {up:=>VolumeDirection} im {office:=>Room}",
+			"Bitte mach die Musik {louder:=>VolumeDirection} in der {office:=>Room}",
+			"Mach die Musik {louder:=>VolumeDirection} in der {office:=>Room}",
+			"Mach die Musik {louder:=>VolumeDirection} in der {office:=>Room} bitte",
+			"Musik {less loud:=>VolumeDirection} im {office:=>Room} bitte",
+			"{less loud:=>VolumeDirection} in der {office:=>Room} bitte",
+			"{louder:=>VolumeDirection} im {office:=>Room}",
+			"{increase:=>VolumeDirection} die Laustärke im {office:=>Room}",
+			"{increase:=>VolumeDirection} die Laustärke im {office:=>Room} bitte",
+			"{increase:=>VolumeDirection} die Laustärke in der {office:=>Room}",
+			"{increase:=>VolumeDirection} die Laustärke in der {office:=>Room} bitte",
+			"bitte {increase:=>VolumeDirection} die Laustärke im {office:=>Room}",
+			"bitte {increase:=>VolumeDirection} die Laustärke in der {office:=>Room}",
+			"{more:=>VolumeDirection} Laustärke im {office:=>Room} bitte",
+			"{more:=>VolumeDirection} Laustärke im {office:=>Room}",
+			"{more:=>VolumeDirection} Laustärke in der {office:=>Room} bitte",
+			"{more:=>VolumeDirection} Laustärke in der {office:=>Room}",
+			"{more:=>VolumeDirection} die Laustärke in der {office:=>Room} bitte",
+			"{more:=>VolumeDirection} die Laustärke in der {kitchen:=>Room}",
+			"Setze die Lautstärke {higher:=>VolumeDirection} im {office:=>Room}",
+			"Setze die Lautstärke {higher:=>VolumeDirection} in der {kitchen:=>Room}",
+			"Setze die Lautstärke {lower:=>VolumeDirection} im {office:=>Room} bitte",
+			"Setze die Lautstärke {lower:=>VolumeDirection} in der {office:=>Room} bitte",
+			"Setze die Lautstärke auf {35:=>ExactVolume} im {office:=>Room} bitte",
+			"Setze die Lautstärke auf {35:=>ExactVolume} in der {kitchen:=>Room} bitte",
+			"Ändere die Lautstärke auf {42:=>ExactVolume} im {office:=>Room} bitte",
+			"Ändere die Lautstärke auf {42:=>ExactVolume} in der {kitchen:=>Room} bitte",
+			"Bitte ändere die Lautstärke auf {11:=>ExactVolume} im {office:=>Room}",
+			"Bitte ändere die Lautstärke auf {11:=>ExactVolume} in der {office:=>Room}",
+			"Bitte setze die Lautstärke auf {99:=>ExactVolume} im {office:=>Room}",
+			"Bitte setze die Lautstärke auf {99:=>ExactVolume} in der {kitchen:=>Room}",
+			"Kannst du bitte die Laustärkeauf {12:=>ExactVolume} im {office:=>Room} setzen",
+			"Kannst du bitte die Laustärkeauf {12:=>ExactVolume} in der {office:=>Room} setzen"
+		],
+		"slots": [
+			{
+				"name": "VolumeDirection",
+				"description": null,
+				"required": false,
+				"type": "VolumeDirection",
+				"missingQuestion": ""
+			},
+			{
+				"name": "ExactVolume",
+				"description": null,
+				"required": false,
+				"type": "snips/number",
+				"missingQuestion": ""
+			},
+			{
+				"name": "Room",
+				"description": null,
+				"required": false,
+				"type": "Alice/Room",
+				"missingQuestion": ""
+			}
+			]
+		}
+	]
+}
