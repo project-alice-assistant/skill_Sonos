@@ -122,7 +122,7 @@
         		"Schalte die Musik im {Wohnzimmer:=>Room} {play:=>Action}",
 			"Schalte die Musik in der {Wohnzimmer:=>Room} {play:=>Action}",
 			"Bitte schalte die Musik im {office:=>Room} {play:=>Action}",
-        		"Bitte schalte die Musik in der {kitchen:=>Room} {play:=>Action}"
+        		"Bitte schalte die Musik in der {kitchen:=>Room} {play:=>Action}",
 			"{stop:=>Action} schalte die Musik im {office:=>Room}",
         		"{stop:=>Action} schalte die Musik in der {kitchen:=>Room}"
             ],
