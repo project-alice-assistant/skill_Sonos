@@ -1,10 +1,10 @@
 {
     "name": "Sonos",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "icon": "fas fa-music",
     "category": "music",
     "author": "Psychokiller1888",
-    "maintainers": [],
+    "maintainers": ["Fe3lApAcUt"],
     "desc": "Let alice control your sonos hardware",
     "aliceMinVersion": "1.0.0-a6",
     "systemRequirements": [
@@ -15,7 +15,8 @@
     ],
     "conditions": {
         "lang": [
-            "en"
+            "en",
+			"de"
         ],
         "asrArbitraryCapture": true
     }

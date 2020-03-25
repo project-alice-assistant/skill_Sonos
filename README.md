@@ -6,8 +6,9 @@
 Let alice control your sonos hardware
 
 - Author: Psychokiller1888
-- Maintainers: 
+- Maintainers: Fe3lApAcUt
 - Alice minimum Version: 1.0.0-a6
 - Languages:
    - en
+   - de
 

@@ -1,0 +1,13 @@
+{
+	"noPlayerInRoom": [
+		"Entschuldigung, es gibt kein Sonos Gerät in {}.",
+		"Nein, das kann ich nicht, es gibt kein Sonos Gerät in {}.",
+		"Es tut mir wirklich leid, aber das geht nicht, es gibt kein Sonos Gerät in {}."
+	],
+	"ok": [
+		"Ok, erledigt!",
+		"Völlig klar!",
+		"Sicher, gerade gemacht.",
+		"Natürlich!"
+	]
+}
