@@ -27,8 +27,7 @@ class Sonos(AliceSkill):
 		self._sonosPlayers = {device.player_name.lower(): device for device in soco.discover()}
 
 		if not self._sonosPlayers:
-			self.logWarning('No Sonos device found')
-			raise SkillStartingFailed
+			raise SkillStartingFailed(skillName=self.name, error='No Sonos device found')
 
 
 	def onGoingBed(self):
