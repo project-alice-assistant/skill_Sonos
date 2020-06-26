@@ -132,19 +132,19 @@ class Sonos(AliceSkill):
 
 
 	def filterPlayers(self, session: DialogSession) -> Optional[List[SoCo]]:
-		room = session.slots['Room'].lower() if 'Room' in session.slots else session.siteId
+		location = session.slots['Location'].lower() if 'Location' in session.slots else session.siteId
 
-		if room == constants.EVERYWHERE:
+		if location == constants.EVERYWHERE:
 			return [player for player in self._sonosPlayers.values()]
 
-		if room not in self._sonosPlayers:
+		if location not in self._sonosPlayers:
 			self.endDialog(
 				sessionId=session.sessionId,
-				text=self.randomTalk(text='noPlayerInRoom', replace=[room])
+				text=self.randomTalk(text='noPlayerInRoom', replace=[location])
 			)
 			return None
 
-		return [self._sonosPlayers[room]]
+		return [self._sonosPlayers[location]]
 
 
 	@staticmethod

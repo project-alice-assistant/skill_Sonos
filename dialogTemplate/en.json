@@ -81,7 +81,7 @@
         	"enabledByDefault": true,
         	"utterances": [
         		"music please",
-        		"please, music in the {office:=>Room}",
+        		"please, music in the {office:=>Location}",
         		"let's {play:=>Action} some music",
         		"can you please {stop:=>Action} the music",
         		"{play:=>Action} some music",
@@ -90,14 +90,14 @@
         		"please {stop:=>Action} the music",
         		"turn {on:=>Action} the music",
         		"please turn {on:=>Action} the music",
-                "let's {play:=>Action} some music in the {office:=>Room}",
-        		"can you please {stop:=>Action} the music in {bathroom:=>Room}",
-        		"{play:=>Action} some music {everywhere:=>Room}",
-        		"{play:=>Action} some music in the {kitchen:=>Room} please",
-        		"please {play:=>Action} some music in the {office:=>Room}",
-        		"please {stop:=>Action} the music in {bedroom:=>Room}",
-        		"turn {on:=>Action} the music in the {living room:=>Room}",
-        		"please turn {on:=>Action} the music in the {office:=>Room}"
+                "let's {play:=>Action} some music in the {office:=>Location}",
+        		"can you please {stop:=>Action} the music in {bathroom:=>Location}",
+        		"{play:=>Action} some music {everywhere:=>Location}",
+        		"{play:=>Action} some music in the {kitchen:=>Location} please",
+        		"please {play:=>Action} some music in the {office:=>Location}",
+        		"please {stop:=>Action} the music in {bedroom:=>Location}",
+        		"turn {on:=>Action} the music in the {living Location:=>Location}",
+        		"please turn {on:=>Action} the music in the {office:=>Location}"
             ],
         	"slots": [
         		{
@@ -108,10 +108,10 @@
 					"missingQuestion": ""
 				},
 				{
-					"name": "Room",
+					"name": "Location",
 					"description": null,
 					"required": false,
-					"type": "Alice/Room",
+					"type": "Alice/Location",
 					"missingQuestion": ""
 				}
 			]
@@ -135,16 +135,16 @@
 				"{skip:=>Direction} this track",
 				"{previous:=>Direction} song please",
 				"{previous:=>Direction} track please",
-				"can you go to the {next:=>Direction} track in the {kitchen:=>Room}",
-				"can you go to the {previous:=>Direction} track in the {bedroom:=>Room} please",
-				"please go to the {next:=>Direction} track in {living room:=>Room}",
-				"please go to the {previous:=>Direction} song in the {attic:=>Room}",
-				"change to the {next:=>Direction} song in the {garden:=>Room}",
-				"please change to the {next:=>Direction} track in the {office:=>Room}",
-				"play the {next:=>Direction} track in the {bedroom:=>Room} please",
-				"please play the {next:=>Direction} song in the {kitchen:=>Room}",
-				"{previous:=>Direction} song in the {kitchen:=>Room} please",
-				"{previous:=>Direction} track in the {kitchen:=>Room} please"
+				"can you go to the {next:=>Direction} track in the {kitchen:=>Location}",
+				"can you go to the {previous:=>Direction} track in the {bedroom:=>Location} please",
+				"please go to the {next:=>Direction} track in {living Location:=>Location}",
+				"please go to the {previous:=>Direction} song in the {attic:=>Location}",
+				"change to the {next:=>Direction} song in the {garden:=>Location}",
+				"please change to the {next:=>Direction} track in the {office:=>Location}",
+				"play the {next:=>Direction} track in the {bedroom:=>Location} please",
+				"please play the {next:=>Direction} song in the {kitchen:=>Location}",
+				"{previous:=>Direction} song in the {kitchen:=>Location} please",
+				"{previous:=>Direction} track in the {kitchen:=>Location} please"
 			],
 			"slots": [
 				{
@@ -155,10 +155,10 @@
 					"missingQuestion": ""
 				},
 				{
-					"name": "Room",
+					"name": "Location",
 					"description": null,
 					"required": false,
-					"type": "Alice/Room",
+					"type": "Alice/Location",
 					"missingQuestion": ""
 				}
 			]
@@ -191,21 +191,21 @@
 				"please change the volume to {11:=>ExactVolume}",
 				"please set the volume to {99:=>ExactVolume}",
 				"can you please set the volume to {12:=>ExactVolume}",
-				"can you make the music {louder:=>VolumeDirection} in the {office:=>Room}",
-				"crank {up:=>VolumeDirection} the volume in the {bedroom:=>Room} please",
-				"crank {up:=>VolumeDirection} the volume in the {living room:=>Room}",
-				"turn {down:=>VolumeDirection} the volume in the {office:=>Room} please",
-				"turn {up:=>VolumeDirection} the volume in the {office:=>Room}",
-				"can you please make the music {louder:=>VolumeDirection} in the {office:=>Room}",
-				"make the music {louder:=>VolumeDirection} in the {office:=>Room}",
-				"make the music {louder:=>VolumeDirection} in the {office:=>Room} please",
-				"music {less loud:=>VolumeDirection} in the {office:=>Room} please",
-				"{less loud:=>VolumeDirection} in the {office:=>Room} please",
-				"{louder:=>VolumeDirection} in the {office:=>Room}",
-				"{increase:=>VolumeDirection} the volume in the {office:=>Room}",
-				"{increase:=>VolumeDirection} the volume in the {office:=>Room} please",
-				"please {increase:=>VolumeDirection} the volume in the {office:=>Room}",
-				"{more:=>VolumeDirection} volume in the {office:=>Room} please",
+				"can you make the music {louder:=>VolumeDirection} in the {office:=>Location}",
+				"crank {up:=>VolumeDirection} the volume in the {bedroom:=>Location} please",
+				"crank {up:=>VolumeDirection} the volume in the {living Location:=>Location}",
+				"turn {down:=>VolumeDirection} the volume in the {office:=>Location} please",
+				"turn {up:=>VolumeDirection} the volume in the {office:=>Location}",
+				"can you please make the music {louder:=>VolumeDirection} in the {office:=>Location}",
+				"make the music {louder:=>VolumeDirection} in the {office:=>Location}",
+				"make the music {louder:=>VolumeDirection} in the {office:=>Location} please",
+				"music {less loud:=>VolumeDirection} in the {office:=>Location} please",
+				"{less loud:=>VolumeDirection} in the {office:=>Location} please",
+				"{louder:=>VolumeDirection} in the {office:=>Location}",
+				"{increase:=>VolumeDirection} the volume in the {office:=>Location}",
+				"{increase:=>VolumeDirection} the volume in the {office:=>Location} please",
+				"please {increase:=>VolumeDirection} the volume in the {office:=>Location}",
+				"{more:=>VolumeDirection} volume in the {office:=>Location} please",
 				"{more:=>VolumeDirection} volume in the {office:=>Room}",
 				"set the volume {higher:=>VolumeDirection} in the {office:=>Room}",
 				"set the volume {lower:=>VolumeDirection} in the {office:=>Room} please",
@@ -234,7 +234,7 @@
 					"name": "Room",
 					"description": null,
 					"required": false,
-					"type": "Alice/Room",
+					"type": "Alice/Location",
 					"missingQuestion": ""
 				}
 			]

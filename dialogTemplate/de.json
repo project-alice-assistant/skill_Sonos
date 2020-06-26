@@ -94,10 +94,10 @@
         	"description": "Der Benutzer möchte die Musik starten, stoppen oder pausieren",
         	"enabledByDefault": true,
         	"utterances": [
-        		"Musik bitte im {office:=>Room}",
-			"Musik bitte in der {kitchen:=>Room}",
-        		"Bitte Musik im {office:=>Room}",
-			"Bitte Musik in der {kitchen:=>Room}",
+        		"Musik bitte im {office:=>Location}",
+			"Musik bitte in der {kitchen:=>Location}",
+        		"Bitte Musik im {office:=>Location}",
+			"Bitte Musik in der {kitchen:=>Location}",
         		"Kannst Du bitte die Musik {stop:=>Action}",
         		"{play:=>Action} ein bisschen Musik",
         		"{play:=>Action} ein bisschen Musik, bitte",
@@ -105,26 +105,26 @@
         		"Bitte {stop:=>Action} die Musik",
         		"Schalte die Musik {on:=>Action}",
         		"Bitte schalte die Musik {on:=>Action}",
-			"Lass uns ein bisschen Musik im {office:=>Room} {play:=>Action}",
-			"Lass uns ein bisschen Musik in der {kitchen:=>Room} {abplay:=>Action}",
-        		"Kannst Du bitte die Musik im {Badezimmer:=>Room} {stoppen:=>Action}",
-			"Kannst Du bitte die Musik in der {kitchen:=>Room} {stoppen:=>Action}",
-        		"{play:=>Action} die Musik {Überall:=>Room}",
-			"{play:=>Action} etwas Musik im {office:=>Room}",
-			"{play:=>Action} etwas Musik im {office:=>Room} ab",
-			"{play:=>Action} die Musik in der {kitchen:=>Room}",
-        		"{play:=>Action} ein bisschen Musik im {office:=>Room} bitte",
-			"{play:=>Action} ein bisschen Musik in der {kitchen:=>Room} bitte",
-			"Bitte {play:=>Action} etwas Musik im {office:=>Room}",
-        		"Bitte {play:=>Action} etwas Musik in der {kitchen:=>Room}",
-			"Bitte {stoppe:=>Action} die Musik im {Schlafzimmer:=>Room}",
-        		"Bitte {stoppe:=>Action} die Musik in der {kitchen:=>Room}",
-        		"Schalte die Musik im {Wohnzimmer:=>Room} {play:=>Action}",
-			"Schalte die Musik in der {Wohnzimmer:=>Room} {play:=>Action}",
-			"Bitte schalte die Musik im {office:=>Room} {play:=>Action}",
-        		"Bitte schalte die Musik in der {kitchen:=>Room} {play:=>Action}",
-			"{stop:=>Action} schalte die Musik im {office:=>Room}",
-        		"{stop:=>Action} schalte die Musik in der {kitchen:=>Room}"
+			"Lass uns ein bisschen Musik im {office:=>Location} {play:=>Action}",
+			"Lass uns ein bisschen Musik in der {kitchen:=>Location} {abplay:=>Action}",
+        		"Kannst Du bitte die Musik im {Badezimmer:=>Location} {stoppen:=>Action}",
+			"Kannst Du bitte die Musik in der {kitchen:=>Location} {stoppen:=>Action}",
+        		"{play:=>Action} die Musik {Überall:=>Location}",
+			"{play:=>Action} etwas Musik im {office:=>Location}",
+			"{play:=>Action} etwas Musik im {office:=>Location} ab",
+			"{play:=>Action} die Musik in der {kitchen:=>Location}",
+        		"{play:=>Action} ein bisschen Musik im {office:=>Location} bitte",
+			"{play:=>Action} ein bisschen Musik in der {kitchen:=>Location} bitte",
+			"Bitte {play:=>Action} etwas Musik im {office:=>Location}",
+        		"Bitte {play:=>Action} etwas Musik in der {kitchen:=>Location}",
+			"Bitte {stoppe:=>Action} die Musik im {Schlafzimmer:=>Location}",
+        		"Bitte {stoppe:=>Action} die Musik in der {kitchen:=>Location}",
+        		"Schalte die Musik im {Wohnzimmer:=>Location} {play:=>Action}",
+			"Schalte die Musik in der {Wohnzimmer:=>Location} {play:=>Action}",
+			"Bitte schalte die Musik im {office:=>Location} {play:=>Action}",
+        		"Bitte schalte die Musik in der {kitchen:=>Location} {play:=>Action}",
+			"{stop:=>Action} schalte die Musik im {office:=>Location}",
+        		"{stop:=>Action} schalte die Musik in der {kitchen:=>Location}"
             ],
         	"slots": [
         		{
@@ -135,10 +135,10 @@
 					"missingQuestion": ""
 			},
 			{
-				"name": "Room",
+				"name": "Location",
 				"description": null,
 				"required": false,
-				"type": "Alice/Room",
+				"type": "Alice/Location",
 				"missingQuestion": ""
 			}
 			]
@@ -163,8 +163,8 @@
 			"{skip:=>Direction} dieses Lied, bitte",
 			"{previous:=>Direction} Song, bitte",
 			"{previous:=>Direction} Lied, bitte",
-			"Kannst Du bitte das {next:=>Direction} Lied in der {kitchen:=>Room} abspielen",
-			"Kannst Du das {previous:=>Direction} Lied im {bedroom:=>Room} abspielen, bitte",
+			"Kannst Du bitte das {next:=>Direction} Lied in der {kitchen:=>Location} abspielen",
+			"Kannst Du das {previous:=>Direction} Lied im {bedroom:=>Location} abspielen, bitte",
 			"Bitte gehe über zum {next:=>Direction} Titel im {living room:=>Room}",
 			"Bitte gehe über zum {previous:=>Direction} Song in der {attic:=>Room}",
 			"Bitte gehe zum {next:=>Direction} Titel im {living room:=>Room} über",
@@ -194,7 +194,7 @@
 				"name": "Room",
 				"description": null,
 				"required": false,
-				"type": "Alice/Room",
+				"type": "Alice/Location",
 				"missingQuestion": ""
 			}
 			]
@@ -287,7 +287,7 @@
 				"name": "Room",
 				"description": null,
 				"required": false,
-				"type": "Alice/Room",
+				"type": "Alice/Location",
 				"missingQuestion": ""
 			}
 			]
