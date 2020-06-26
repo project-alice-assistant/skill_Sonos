@@ -206,14 +206,14 @@
 				"{increase:=>VolumeDirection} the volume in the {office:=>Location} please",
 				"please {increase:=>VolumeDirection} the volume in the {office:=>Location}",
 				"{more:=>VolumeDirection} volume in the {office:=>Location} please",
-				"{more:=>VolumeDirection} volume in the {office:=>Room}",
-				"set the volume {higher:=>VolumeDirection} in the {office:=>Room}",
-				"set the volume {lower:=>VolumeDirection} in the {office:=>Room} please",
-				"set the volume to {35:=>ExactVolume} in the {office:=>Room} please",
-				"change the volume to {42:=>ExactVolume} in the {office:=>Room} please",
-				"please change the volume to {11:=>ExactVolume} in the {office:=>Room}",
-				"please set the volume to {99:=>ExactVolume} in the {office:=>Room}",
-				"can you please set the volume to {12:=>ExactVolume} in the {office:=>Room}"
+				"{more:=>VolumeDirection} volume in the {office:=>Location}",
+				"set the volume {higher:=>VolumeDirection} in the {office:=>Location}",
+				"set the volume {lower:=>VolumeDirection} in the {office:=>Location} please",
+				"set the volume to {35:=>ExactVolume} in the {office:=>Location} please",
+				"change the volume to {42:=>ExactVolume} in the {office:=>Location} please",
+				"please change the volume to {11:=>ExactVolume} in the {office:=>Location}",
+				"please set the volume to {99:=>ExactVolume} in the {office:=>Location}",
+				"can you please set the volume to {12:=>ExactVolume} in the {office:=>Location}"
 			],
 			"slots": [
 				{
@@ -231,7 +231,7 @@
 					"missingQuestion": ""
 				},
 				{
-					"name": "Room",
+					"name": "Location",
 					"description": null,
 					"required": false,
 					"type": "Alice/Location",
