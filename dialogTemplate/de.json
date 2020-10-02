@@ -1,7 +1,5 @@
 {
     "skill": "Sonos",
-    "icon": "time",
-    "description": "Let alice control your sonos hardware",
     "slotTypes": [
         {
 		"name": "PlayStopPause",
@@ -91,7 +89,6 @@
     "intents": [
         {
         	"name": "PlayStopPauseSonos",
-        	"description": "Der Benutzer möchte die Musik starten, stoppen oder pausieren",
         	"enabledByDefault": true,
         	"utterances": [
         		"Musik bitte im {office:=>Location}",
@@ -145,7 +142,6 @@
 		},
 		{
 		"name": "ChangeTrack",
-		"description": "Benutzer möchte den aktuellen Titel ändern",
 		"enabledByDefault": true,
 		"utterances": [
 			"Kannst du bitte das {next:=>Direction} Lied abspielen",
@@ -201,7 +197,6 @@
 		},
 		{
 		"name": "SetSonosVolume",
-		"description": "Benutzer möchte die Lautsärke eines Sonos Gerätes ändern",
 		"enabledByDefault": true,
 		"utterances": [
 			"Kannst du die Musik {louder:=>VolumeDirection} machen",
