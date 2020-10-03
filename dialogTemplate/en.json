@@ -99,14 +99,12 @@
         	"slots": [
         		{
         			"name": "Action",
-        			"description": null,
         			"required": false,
         			"type": "PlayStopPause",
 					"missingQuestion": ""
 				},
 				{
 					"name": "Location",
-					"description": null,
 					"required": false,
 					"type": "Alice/Location",
 					"missingQuestion": ""
@@ -145,14 +143,12 @@
 			"slots": [
 				{
 					"name": "Direction",
-					"description": null,
 					"required": false,
 					"type": "NextOrPrevious",
 					"missingQuestion": ""
 				},
 				{
 					"name": "Location",
-					"description": null,
 					"required": false,
 					"type": "Alice/Location",
 					"missingQuestion": ""
@@ -213,21 +209,18 @@
 			"slots": [
 				{
 					"name": "VolumeDirection",
-					"description": null,
 					"required": false,
 					"type": "VolumeDirection",
 					"missingQuestion": ""
 				},
 				{
 					"name": "ExactVolume",
-					"description": null,
 					"required": false,
 					"type": "snips/number",
 					"missingQuestion": ""
 				},
 				{
 					"name": "Location",
-					"description": null,
 					"required": false,
 					"type": "Alice/Location",
 					"missingQuestion": ""
