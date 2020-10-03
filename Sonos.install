@@ -1,6 +1,6 @@
 {
     "name": "Sonos",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "icon": "fas fa-music",
     "category": "music",
     "author": "Psychokiller1888",
@@ -8,7 +8,7 @@
         "Fe3lApAcUt"
     ],
     "desc": "Let alice control your sonos hardware",
-    "aliceMinVersion": "1.0.0-a6",
+    "aliceMinVersion": "1.0.0-b3",
     "systemRequirements": [
         ""
     ],
