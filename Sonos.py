@@ -147,6 +147,11 @@ class Sonos(AliceSkill):
 		return [self._sonosPlayers[location]]
 
 
+	@property
+	def sonosPlayers(self) -> Dict[str, SoCo]:
+		return self._sonosPlayers
+
+
 	@staticmethod
 	def action(player: SoCo, action: str):
 		if action == 'play':

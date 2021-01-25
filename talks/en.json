@@ -8,5 +8,11 @@
 		"Ok, done!",
 		"Sure, just did.",
 		"Of course!"
+	],
+	"deviceSelection": [
+		"Select a device"
+	],
+	"selectDeviceInList": [
+		"Please select a device in the list"
 	]
 }
